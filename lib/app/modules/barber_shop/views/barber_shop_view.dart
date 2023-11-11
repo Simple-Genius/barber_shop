@@ -1,5 +1,6 @@
 import 'package:barber_shop/app/widgets/booking_card.dart';
 import 'package:barber_shop/app/widgets/category_card.dart';
+import 'package:barber_shop/app/widgets/service_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/barber_shop_controller.dart';
@@ -138,6 +139,52 @@ class BarberShopView extends GetView<BarberShopController> {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ),
+            SizedBox(
+              height: 10,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ServiceTile(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  ServiceTile(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  ServiceTile(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  ServiceTile(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  ServiceTile(),
+                  SizedBox(
+                    width: 10,
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              //padding: ,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 224, 232, 238),
+                  borderRadius: BorderRadius.circular(20)),
+              child: Row(children: [
+                Image(
+                  image: AssetImage('images/img2.jpeg'),
+                  height: 200,
+                  width: 200,
+                )
+              ]),
+            )
           ],
         ),
       ),
