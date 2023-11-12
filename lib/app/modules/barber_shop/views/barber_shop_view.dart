@@ -1,5 +1,7 @@
+import 'package:barber_shop/app/modules/barber_shop/views/categories_page.dart';
 import 'package:barber_shop/app/widgets/booking_card.dart';
 import 'package:barber_shop/app/widgets/category_card.dart';
+import 'package:barber_shop/app/widgets/salon_card.dart';
 import 'package:barber_shop/app/widgets/service_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -107,7 +109,11 @@ class BarberShopView extends GetView<BarberShopController> {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 Spacer(),
-                TextButton(onPressed: () {}, child: Text('View All'))
+                TextButton(
+                    onPressed: () {
+                      Get.to(() => CategoryPage());
+                    },
+                    child: Text('View All'))
               ],
             ),
             Row(
@@ -172,19 +178,22 @@ class BarberShopView extends GetView<BarberShopController> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              //padding: ,
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 224, 232, 238),
-                  borderRadius: BorderRadius.circular(20)),
-              child: Row(children: [
-                Image(
-                  image: AssetImage('images/img2.jpeg'),
-                  height: 200,
-                  width: 200,
-                )
-              ]),
-            )
+            SalonCard(),
+            SizedBox(
+              height: 30,
+            ),
+            SalonCard(),
+            SizedBox(
+              height: 30,
+            ),
+            SalonCard(),
+            SizedBox(
+              height: 30,
+            ),
+            SalonCard(),
+            SizedBox(
+              height: 30,
+            ),
           ],
         ),
       ),
