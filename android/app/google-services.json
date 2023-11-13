@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "406650468103",
+    "project_id": "barber-shop3",
+    "storage_bucket": "barber-shop3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406650468103:android:ae84cddc9c9cc81b7b37a2",
+        "android_client_info": {
+          "package_name": "com.exmaple.barber_shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp2yLJfWvilkb_3rfGwk-Js416E8lPp9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
