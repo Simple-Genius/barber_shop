@@ -1,3 +1,4 @@
+import 'package:barber_shop/app/data/services.dart';
 import 'package:get/get.dart';
 
 class BarberShopController extends GetxController {
@@ -7,6 +8,7 @@ class BarberShopController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    //dataService.uploadImage();
   }
 
   @override
