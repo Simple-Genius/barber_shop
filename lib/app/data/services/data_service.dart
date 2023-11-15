@@ -1,39 +1,20 @@
-import 'dart:io';
-
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:get/get.dart';
 
 class DataService extends GetxService {
-  FirebaseStorage store = FirebaseStorage.instance;
-  // Future<void> uploadImage() async {
-  //   final storageRef = FirebaseStorage.instance.ref();
-  //   final imageRef = storageRef.child('images/img1.jpeg');
-  //   const filePath = "/Users/Boye/StudioProjects/barber_shop/images/img1.jpeg";
-  //   final file = File(filePath);
-  //   final metadata = SettableMetadata(contentType: "image/jpeg");
-  //   final uploadTask =
-  //       storageRef.child("images/img1.jpeg").putFile(file, metadata);
-  //   uploadTask.snapshotEvents.listen((TaskSnapshot taskSnapshot) {
-  //     switch (taskSnapshot.state) {
-  //       case TaskState.running:
-  //         final progress =
-  //             100.0 * (taskSnapshot.bytesTransferred / taskSnapshot.totalBytes);
-  //         print("Upload is $progress% complete.");
-  //         break;
-  //       case TaskState.paused:
-  //         print("Upload is paused.");
-  //         break;
-  //       case TaskState.canceled:
-  //         print("Upload was canceled");
-  //         break;
-  //       case TaskState.error:
-  //         print("There was an error in the upload");
-  //         break;
-  //       case TaskState.success:
-  //         break;
-  //     }
-  //   });
-  // }
+  RxString imageUrl = "".obs;
 
-  Future<dynamic> retreiveImage() async {}
+  void onInit() async {
+    super.onInit();
+
+    await retreiveImage();
+    print(retreiveImage());
+  }
+
+  Future<dynamic> retreiveImage() async {
+    final ref = FirebaseStorage.instance.ref("img1.jpeg");
+    print("This part is working");
+    print(await ref.getDownloadURL());
+    return await ref.getDownloadURL();
+  }
 }

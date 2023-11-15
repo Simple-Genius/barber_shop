@@ -8,7 +8,7 @@ class BarberShopController extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    //dataService.uploadImage();
+    dataService.retreiveImage();
   }
 
   @override
