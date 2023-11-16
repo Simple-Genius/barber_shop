@@ -6,9 +6,9 @@ class BarberShopController extends GetxController {
 
   final count = 0.obs;
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
-    dataService.retreiveImage();
+    await dataService.retreiveImage();
   }
 
   @override

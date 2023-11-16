@@ -7,11 +7,13 @@ class DataService extends GetxService {
   void onInit() async {
     super.onInit();
 
-    await retreiveImage();
-    print(retreiveImage());
+    var imageUrl = await retreiveImage();
+    retreiveImage();
+    print(imageUrl);
   }
 
   Future<dynamic> retreiveImage() async {
+    print("This part is working 1");
     final ref = FirebaseStorage.instance.ref("img1.jpeg");
     print("This part is working");
     print(await ref.getDownloadURL());
