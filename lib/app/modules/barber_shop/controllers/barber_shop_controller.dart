@@ -2,9 +2,6 @@ import 'package:barber_shop/app/data/services.dart';
 import 'package:get/get.dart';
 
 class BarberShopController extends GetxController {
-  //TODO: Implement BarberShopController
-
-  final count = 0.obs;
   @override
   void onInit() async {
     super.onInit();
@@ -12,14 +9,13 @@ class BarberShopController extends GetxController {
   }
 
   @override
-  void onReady() {
+  void onReady() async {
     super.onReady();
+    await dataService.retreiveImage();
   }
 
   @override
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
